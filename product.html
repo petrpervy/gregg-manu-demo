@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Product | Greg's Manufacturing</title>
+    <meta name="description" id="page-meta" content="Greg's Manufacturing — quality lumber, core boxes, pallets and custom wood products for mineral exploration and construction across Canada.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&family=Poppins:ital,wght@0,400;0,600;0,700;1,700&family=Caveat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- NAV OVERLAY (mobile) -->
+<div class="nav-overlay"></div>
+
+<!-- HEADER -->
+<header class="navbar">
+    <div class="navbar-container">
+        <a href="index.html" class="navbar-logo">
+            <img src="https://static.wixstatic.com/media/cbf3d6_d84fb97ebce346318b91014af316a2ef~mv2.webp/v1/fill/w_68,h_68,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/cbf3d6_d84fb97ebce346318b91014af316a2ef~mv2.webp" alt="Greg's Manufacturing" width="34" height="34">
+        </a>
+        <nav class="navbar-nav">
+            <a href="canadacorebox.html" class="nav-link">CanadaCoreBox</a>
+            <a href="shop.html" class="nav-link">Catalogue</a>
+            <a href="about.html" class="nav-link">About Us</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+        <div class="navbar-phone">
+            <a href="tel:+12044722217"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-right:5px;vertical-align:middle;opacity:0.7"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.11 12 19.79 19.79 0 0 1 1 4.18 2 2 0 0 1 3 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>204-472-2217</a>
+        </div>
+        <div class="navbar-social-icons">
+            <a href="https://www.facebook.com/GregsManufacturing" target="_blank" rel="noopener" aria-label="Facebook">
+                <svg viewBox="0 0 24 24" width="18" height="18"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" fill="#1D0E03"/></svg>
+            </a>
+        </div>
+        <button class="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</header>
+
+<!-- BREADCRUMB -->
+<nav class="product-breadcrumb" id="product-breadcrumb" aria-label="Breadcrumb">
+    <a href="index.html">Home</a>
+    <span class="breadcrumb-sep">›</span>
+    <a href="shop.html">Catalogue</a>
+    <span class="breadcrumb-sep">›</span>
+    <a href="#" id="breadcrumb-category">Category</a>
+    <span class="breadcrumb-sep">›</span>
+    <span id="breadcrumb-product">Product</span>
+</nav>
+
+<!-- PRODUCT DETAIL -->
+<section class="product-detail" id="product-detail">
+    <div class="product-detail-image-wrap" id="product-image-wrap">
+        <!-- image or placeholder injected by JS -->
+    </div>
+    <div class="product-detail-info">
+        <span class="product-category-badge" id="product-category-badge">Category</span>
+        <h1 id="product-name">Loading...</h1>
+        <p class="product-description" id="product-description"></p>
+        <div class="product-price-row">
+            <span class="product-price-label">Pricing</span>
+            <span class="product-price" id="product-price">Quote on Request</span>
+        </div>
+        <div class="product-actions">
+            <a href="contact.html" class="product-quote-btn">Request a Quote</a>
+            <a href="#" id="back-to-catalogue" class="product-back-btn">← Back to Catalogue</a>
+        </div>
+        <div class="product-contact-note">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.11 12 19.79 19.79 0 0 1 1 4.18 2 2 0 0 1 3 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call us at <a href="tel:+12044722217">204-472-2217</a> for custom orders &amp; pricing.
+        </div>
+    </div>
+</section>
+
+<!-- NOT FOUND STATE (hidden by default) -->
+<section class="product-not-found" id="product-not-found" style="display:none;">
+    <h2>Product Not Found</h2>
+    <p>We couldn't find that product. <a href="shop.html">Browse our full catalogue →</a></p>
+</section>
+
+<!-- RELATED PRODUCTS -->
+<section class="product-related" id="product-related" style="display:none;">
+    <div class="product-related-inner">
+        <h2>More in <span id="related-category-label">this category</span></h2>
+        <div class="product-grid product-related-grid" id="related-grid"></div>
+        <div class="product-related-cta">
+            <a href="#" id="related-view-all" class="product-back-btn">View All →</a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="brush-divider"></div>
+    <div class="footer-content">
+        <div class="footer-logo">
+            <img src="https://static.wixstatic.com/media/cbf3d6_6646ef0430bb4366b4a4011373a65ad4~mv2.png/v1/fill/w_466,h_166,al_c,q_85,usm_0.66_1.00_0.01/cbf3d6_6646ef0430bb4366b4a4011373a65ad4~mv2.png" alt="GML Logo">
+            <p class="footer-tagline">Built in Cranberry Portage, MB.<br>Trusted across the north.</p>
+        </div>
+        <nav class="footer-nav">
+            <a href="canadacorebox.html">CanadaCoreBox</a>
+            <a href="shop.html">Catalogue</a>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About Us</a>
+        </nav>
+        <div class="footer-social">
+            <a href="https://www.facebook.com/GregsManufacturing" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        &copy; 2026 Greg's Manufacturing Limited. All Rights Reserved.
+    </div>
+</footer>
+
+<script src="js/main.js?v=2"></script>
+<script>
+// ============================================================
+//  PRODUCT DATA
+//  Each product has: name, category (filter key), categoryLabel,
+//  categoryHash (for back-link), image (Wix CDN URL or null),
+//  description
+// ============================================================
+
+const PLACEHOLDER_SVG_GENERIC = `<svg viewBox="0 0 60 60" fill="none" stroke="rgba(180,140,100,0.5)" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="12" width="40" height="36" rx="2"/><path d="M10 28h40"/><path d="M25 12v36"/></svg>`;
+
+const PRODUCTS = {
+
+    // ── MANUFACTURED WOOD ─────────────────────────────────────────────
+    '6in-log-siding': {
+        name: '6" Log Siding',
+        category: 'manufactured',
+        categoryLabel: 'Manufactured Wood',
+        images: ['images/catalog/log-siding-closeup.jpg', 'images/catalog/log-siding-installed.jpg', 'images/catalog/log-siding-profile.jpg'],
+        description: 'Premium tongue-and-groove log siding precision-milled to a 6\" face width. Kiln-dried for stability, ideal for residential cabins, lodges, and commercial buildings. Provides the authentic look of a log home with easier installation. Available in custom lengths to minimize waste on your project.',
+        specs: ['6" face width', 'Tongue & groove profile', 'Kiln dried', 'Custom lengths available']
+    },
+    '8in-log-siding': {
+        name: '8" Log Siding',
+        category: 'manufactured',
+        categoryLabel: 'Manufactured Wood',
+        images: ['images/catalog/log-siding-profile.jpg', 'images/catalog/log-siding-closeup.jpg', 'images/catalog/log-siding-installed.jpg'],
+        description: 'Precision-milled 8\" log siding for a bold, authentic log-home aesthetic. Kiln-dried and profiled with a tight tongue-and-groove fit for weathertight installation on cabins, lodges, and recreational buildings. Available in custom lengths.',
+        specs: ['8" face width', 'Tongue & groove profile', 'Kiln dried', 'Custom lengths available']
+    },
+    '10in-log-siding': {
+        name: '10" Log Siding',
+        category: 'manufactured',
+        categoryLabel: 'Manufactured Wood',
+        images: ['images/catalog/log-siding-installed.jpg', 'images/catalog/log-siding-closeup.jpg', 'images/catalog/log-siding-profile.jpg'],
+        description: 'Our widest log siding profile at 10\", delivering maximum visual impact on large residential and commercial builds. Milled to tight tolerances and kiln-dried for lasting performance. Custom lengths available to suit any project.',
+        specs: ['10" face width', 'Tongue & groove profile', 'Kiln dried', 'Custom lengths available']
+    },
+    'marking-blocks': {
+        name: 'Marking Blocks',
+        category: 'manufactured',
+        categoryLabel: 'Manufactured Wood',
+        images: ['images/catalog/wooden-stakes.jpg'],
+        description: 'Precision-cut wooden marking blocks for mineral exploration core programs. Sized to fit standard core boxes, they provide accurate depth and interval marking throughout your drill program. Manufactured consistently so field crews can trust every block.',
+        specs: ['Fits standard core boxes', 'Precision cut dimensions', 'Custom sizes available']
+    },
+    'blasting-sticks': {
+        name: 'Blasting Sticks',
+        category: 'manufactured',
+        categoryLabel: 'Manufactured Wood',
+        images: ['images/catalog/blasting-sticks-pallet.jpg'],
+        description: 'Heavy-duty wooden blasting sticks manufactured to mining industry specifications. Used for stemming, spacing, and tamping in blast-hole operations. Consistent dimensions and solid construction ensure reliable performance in demanding underground and open-pit environments.',
+        specs: ['Mining industry spec', 'Consistent dimensions', 'Solid hardwood construction', 'Custom lengths available']
+    },
+    'wooden-wedges': {
+        name: 'Wooden Wedges',
+        category: 'manufactured',
+        categoryLabel: 'Manufactured Wood',
+        images: ['images/catalog/wooden-stakes.jpg'],
+        description: 'Industrial-grade wooden wedges for mining, construction, and material handling. Precision-cut to consistent angles for reliable splitting, levelling, and securing applications. Manufactured in-house at Greg\'s for tight quality control.',
+        specs: ['Consistent angle cut', 'Hardwood construction', 'Custom sizes available']
+    },
+    'dunnage': {
+        name: 'Dunnage',
+        category: 'manufactured',
+        categoryLabel: 'Manufactured Wood',
+        images: ['images/catalog/dunnage-blocks.jpg'],
+        description: 'Kiln-dried dunnage lumber for cargo separation, stacking, and load securing in shipping and warehousing. Manufactured to consistent dimensions for predictable load distribution. Widely used in industrial shipping, rail transport, and warehouse operations across Canada.',
+        specs: ['Kiln dried', 'Consistent cross-sections', 'Standard & custom lengths', 'Bulk quantities available']
+    },
+    'core-racks': {
+        name: 'Core Racks',
+        category: 'manufactured',
+        categoryLabel: 'Manufactured Wood',
+        images: ['images/catalog/ccb-real-stacked.jpg'],
+        description: 'Custom-built core storage racks engineered for mineral exploration programs. Designed for efficient, organized storage and retrieval of drill core samples at remote exploration sites. Available in standard configurations or custom-built to your program\'s specifications.',
+        specs: ['Designed for drill core storage', 'Stackable design', 'Custom configurations available', 'Built for field conditions']
+    },
+    'plywood-mfg': {
+        name: 'Plywood',
+        category: 'manufactured',
+        categoryLabel: 'Manufactured Wood',
+        images: ['images/catalog/dimensional-lumber-surface.jpg', 'images/catalog/dimensional-lumber-stack.jpg'],
+        description: 'Quality plywood panels for construction, industrial packaging, and general fabrication. Available in a range of thicknesses and standard sheet sizes. Sourced and processed at Greg\'s Manufacturing for consistent quality and availability in Northern Manitoba.',
+        specs: ['Multiple thickness options', 'Standard 4x8 sheets', 'Construction & industrial grade', 'Custom sizes available']
+    },
+    'wooden-stakes': {
+        name: 'GML Wooden Stakes',
+        category: 'manufactured',
+        categoryLabel: 'Manufactured Wood',
+        images: ['images/catalog/wooden-stakes.jpg'],
+        description: 'Precision-cut wooden survey and ground-marking stakes manufactured by Greg\'s Manufacturing. Used by exploration crews, surveyors, and construction teams for staking claims, marking grid lines, and establishing survey points. Consistent sizing ensures reliable performance in all soil conditions.',
+        specs: ['Pointed tip', 'Consistent dimensions', 'Bulk quantities available', 'Custom lengths available']
+    },
+    'mine-ladders': {
+        name: 'Mine Ladders',
+        category: 'manufactured',
+        categoryLabel: 'Manufactured Wood',
+        images: [],
+        placeholderSvg: PLACEHOLDER_SVG_GENERIC,
+        description: 'Safety-grade wooden mine ladders built to industry standards for underground mining and exploration access. Custom lengths available to suit raise and shaft dimensions. Constructed from select structural lumber for durability and load capacity in demanding underground environments.',
+        specs: ['Industry safety standards', 'Custom lengths', 'Select structural lumber', 'Underground rated']
+    },
+
+    // ── CANADACOREBOX ─────────────────────────────────────────────────
+    'ccb-plywood': {
+        name: 'CanadaCoreBox — Plywood',
+        category: 'corebox',
+        categoryLabel: 'CanadaCoreBox',
+        images: ['images/catalog/ccb-render-flat.jpg', 'images/catalog/ccb-real-stacked.jpg'],
+        description: 'Precision-cut plywood panels manufactured specifically for the CanadaCoreBox system. Each panel is cut to exact tolerances to ensure a secure, flush fit within the box, protecting core samples from shifting and contamination during transport and storage.',
+        specs: ['Cut for CanadaCoreBox system', 'Precision tolerances', 'Protects sample integrity', 'Available in bulk quantities']
+    },
+    'ccb-2x6': {
+        name: '2x6" CanadaCoreBox',
+        category: 'corebox',
+        categoryLabel: 'CanadaCoreBox',
+        images: ['images/catalog/ccb-render-3groove.jpg', 'images/catalog/ccb-real-stacked.jpg', 'images/catalog/coreboxgemini.jpg'],
+        description: 'The CanadaCoreBox 2x6\" is Greg\'s Manufacturing\'s flagship core storage solution, ideal for HQ, NQ, and BQ-size drill core. Precision-milled from Canadian spruce with consistent wall thickness and a secure interlocking lid. Designed to stack safely in the field and ship without damage. Used by exploration programs across Canada.',
+        specs: ['Fits HQ, NQ, BQ core', '2x6" interior dimension', 'Interlocking lid', 'Field-tested construction', 'Stackable design', 'Made in Canada']
+    },
+    'ccb-2x8': {
+        name: '2x8" CanadaCoreBox',
+        category: 'corebox',
+        categoryLabel: 'CanadaCoreBox',
+        images: ['images/catalog/ccb-render-4groove.jpg', 'images/catalog/ccb-render-hero.jpg', 'images/catalog/ccb-real-stacked.jpg'],
+        description: 'The CanadaCoreBox 2x8\" provides extra capacity for PQ and larger core samples from deep drilling programs. Built from premium Canadian lumber with reinforced construction to handle the added weight. Features the same interlocking lid and stackable design as the 2x6\", trusted by drillers across Northern Canada.',
+        specs: ['Fits PQ and larger core', '2x8" interior dimension', 'Reinforced construction', 'Interlocking lid', 'Stackable design', 'Made in Canada']
+    },
+
+    // ── MOULDING & MILLWORK ──────────────────────────────────────────
+    'flooring': {
+        name: 'Flooring',
+        category: 'moulding',
+        categoryLabel: 'Moulding & Millwork',
+        images: ['images/catalog/dimensional-lumber-surface.jpg'],
+        description: 'Custom-milled tongue-and-groove flooring in softwood and hardwood species. Kiln-dried for dimensional stability, our flooring is precision-milled for tight joints and a consistent surface. Available in multiple widths and custom lengths for residential and commercial projects.',
+        specs: ['Tongue & groove profile', 'Kiln dried', 'Multiple species available', 'Custom widths & lengths']
+    },
+    'shiplap': {
+        name: 'Shiplap',
+        category: 'moulding',
+        categoryLabel: 'Moulding & Millwork',
+        images: ['images/catalog/shiplap-bundle.jpg', 'images/catalog/shiplap-pallet.jpg'],
+        description: 'Precision-milled shiplap boards for interior accent walls, exterior cladding, and ceiling applications. Clean, consistent rebated profiles create the characteristic shadow line that makes shiplap a popular choice in modern farmhouse and cabin-style design. Available in custom lengths.',
+        specs: ['Rebated shiplap profile', 'Interior & exterior grades', 'Custom lengths available', 'Multiple species options']
+    },
+    'interior-vjoint': {
+        name: 'Interior V-Joint',
+        category: 'moulding',
+        categoryLabel: 'Moulding & Millwork',
+        images: ['images/catalog/log-siding-closeup.jpg'],
+        description: 'Smooth-finish interior V-joint paneling for walls and ceilings, delivering a clean, classic look popular in cabins, lodges, and residential interiors. Precision-milled tongue-and-groove profiles ensure tight, consistent V-joints across the full run. Available in custom lengths and multiple species.',
+        specs: ['V-joint tongue & groove', 'Interior application', 'Smooth finish', 'Custom lengths available']
+    },
+    'log-siding-moulding-6in': {
+        name: '6" Log Siding',
+        category: 'moulding',
+        categoryLabel: 'Moulding & Millwork',
+        images: ['images/catalog/log-siding-closeup.jpg', 'images/catalog/log-siding-installed.jpg', 'images/catalog/log-siding-profile.jpg'],
+        description: 'Premium tongue-and-groove log siding precision-milled to a 6\" face width. Kiln-dried for stability, ideal for residential cabins, lodges, and commercial buildings. Provides the authentic look of a log home with easier installation. Available in custom lengths to minimize waste on your project.',
+        specs: ['6" face width', 'Tongue & groove profile', 'Kiln dried', 'Custom lengths available']
+    },
+    'log-siding-moulding-8in': {
+        name: '8" Log Siding',
+        category: 'moulding',
+        categoryLabel: 'Moulding & Millwork',
+        images: ['images/catalog/log-siding-profile.jpg', 'images/catalog/log-siding-closeup.jpg', 'images/catalog/log-siding-installed.jpg'],
+        description: 'Precision-milled 8\" log siding for a bold, authentic log-home aesthetic. Kiln-dried and profiled with a tight tongue-and-groove fit for weathertight installation on cabins, lodges, and recreational buildings. Available in custom lengths.',
+        specs: ['8" face width', 'Tongue & groove profile', 'Kiln dried', 'Custom lengths available']
+    },
+    'log-siding-moulding-10in': {
+        name: '10" Log Siding',
+        category: 'moulding',
+        categoryLabel: 'Moulding & Millwork',
+        images: ['images/catalog/log-siding-installed.jpg', 'images/catalog/log-siding-closeup.jpg', 'images/catalog/log-siding-profile.jpg'],
+        description: 'Our widest log siding profile at 10\", delivering maximum visual impact on large residential and commercial builds. Milled to tight tolerances and kiln-dried for lasting performance. Custom lengths available to suit any project.',
+        specs: ['10" face width', 'Tongue & groove profile', 'Kiln dried', 'Custom lengths available']
+    },
+
+    // ── DIMENSIONAL LUMBER ───────────────────────────────────────────
+    'dimensional-2x12': {
+        name: '2x12 Dimensional Lumber',
+        category: 'dimensional',
+        categoryLabel: 'Dimensional Lumber',
+        images: ['images/catalog/dimensional-lumber-stack.jpg', 'images/catalog/dimensional-lumber-shop.jpg'],
+        description: 'Kiln-dried 2x12 dimensional lumber, surfaced four sides (S4S) for framing, structural, and general construction. The 2x12 is the go-to for floor joists, stair stringers, header beams, and heavy-duty decking. Available in standard and custom lengths.',
+        specs: ['2" x 12" nominal', 'Surfaced four sides (S4S)', 'Kiln dried', 'Standard & custom lengths']
+    },
+    'dimensional-2x10': {
+        name: '2x10 Dimensional Lumber',
+        category: 'dimensional',
+        categoryLabel: 'Dimensional Lumber',
+        images: ['images/catalog/dimensional-lumber-surface.jpg', 'images/catalog/dimensional-lumber-stack.jpg'],
+        description: 'Kiln-dried 2x10 dimensional lumber for floor joists, rafters, and structural applications where extra depth is required. S4S finish ready for immediate installation. Available in standard and custom lengths.',
+        specs: ['2" x 10" nominal', 'Surfaced four sides (S4S)', 'Kiln dried', 'Standard & custom lengths']
+    },
+    'dimensional-2x8': {
+        name: '2x8 Dimensional Lumber',
+        category: 'dimensional',
+        categoryLabel: 'Dimensional Lumber',
+        images: ['images/catalog/dimensional-lumber-shop.jpg', 'images/catalog/dimensional-lumber-surface.jpg'],
+        description: 'Versatile 2x8 dimensional lumber for joists, rafters, decking, and framing. Kiln-dried and surfaced for consistent dimensions and easy handling. A staple in residential and light commercial construction. Available in standard and custom lengths.',
+        specs: ['2" x 8" nominal', 'Surfaced four sides (S4S)', 'Kiln dried', 'Standard & custom lengths']
+    },
+    'dimensional-2x6': {
+        name: '2x6 Dimensional Lumber',
+        category: 'dimensional',
+        categoryLabel: 'Dimensional Lumber',
+        images: ['images/catalog/dimensional-lumber-stack.jpg', 'images/catalog/dimensional-lumber-shop.jpg'],
+        description: 'Kiln-dried 2x6 for wall framing, decking, fencing, and structural applications. One of the most widely used sizes in Canadian construction, ideal for exterior walls with improved insulation depth. Available in standard and custom lengths.',
+        specs: ['2" x 6" nominal', 'Surfaced four sides (S4S)', 'Kiln dried', 'Standard & custom lengths']
+    },
+    'dimensional-2x4': {
+        name: '2x4 Dimensional Lumber',
+        category: 'dimensional',
+        categoryLabel: 'Dimensional Lumber',
+        images: ['images/catalog/dimensional-lumber-stack.jpg'],
+        description: 'The most common framing lumber in North American construction. Kiln-dried 2x4s for interior and exterior wall framing, blocking, and general construction. Available in standard and custom lengths with volume discounts.',
+        specs: ['2" x 4" nominal', 'Surfaced four sides (S4S)', 'Kiln dried', 'Standard & custom lengths']
+    },
+    'dimensional-2x2': {
+        name: '2x2 Dimensional Lumber',
+        category: 'dimensional',
+        categoryLabel: 'Dimensional Lumber',
+        images: ['images/catalog/dimensional-lumber-stack.jpg'],
+        description: 'Lightweight kiln-dried 2x2 dimensional lumber for furring, strapping, lattice frames, and finish carpentry applications. Precision-milled for consistent sizing. Available in standard and custom lengths.',
+        specs: ['2" x 2" nominal', 'Kiln dried', 'Custom lengths available']
+    },
+    'dimensional-1x4': {
+        name: '1x4 Dimensional Lumber',
+        category: 'dimensional',
+        categoryLabel: 'Dimensional Lumber',
+        images: ['images/catalog/dimensional-lumber-surface.jpg'],
+        description: 'Kiln-dried 1x4 for trim, casing, shelving, and light framing. A versatile finish lumber size used in everything from baseboards to built-ins. Smooth S4S surface ready for paint or stain. Available in standard and custom lengths.',
+        specs: ['1" x 4" nominal', 'Surfaced four sides (S4S)', 'Kiln dried', 'Standard & custom lengths']
+    },
+
+    // ── ROUGH CUT LUMBER ─────────────────────────────────────────────
+    'rough-3x6': {
+        name: '3x6 Rough Cut Lumber',
+        category: 'rough-lumber',
+        categoryLabel: 'Rough Cut Lumber',
+        images: ['images/catalog/rough-cut-lumber.jpg', 'images/catalog/lumber-yard.jpg'],
+        description: 'Full-dimension 3x6 rough cut lumber direct from the mill. Green or air-dried options available. Ideal for heavy-duty construction, mine timbering, and industrial applications where smooth-surfacing is not required. Consistent cross-sections with natural sawmill texture.',
+        specs: ['3" x 6" full dimension', 'Green or air-dried', 'Custom lengths available', 'Bulk quantities available']
+    },
+    'rough-2x12': {
+        name: '2x12 Rough Cut Lumber',
+        category: 'rough-lumber',
+        categoryLabel: 'Rough Cut Lumber',
+        images: ['images/catalog/rough-cut-lumber.jpg', 'images/catalog/lumber-yard.jpg'],
+        description: 'Full-dimension 2x12 rough cut lumber for structural, industrial, and mining applications. Greater actual dimensions than dimensional lumber make rough cut ideal when full cross-section strength is required. Custom lengths available.',
+        specs: ['2" x 12" full dimension', 'Green or air-dried', 'Custom lengths available']
+    },
+    'rough-2x10': {
+        name: '2x10 Rough Cut Lumber',
+        category: 'rough-lumber',
+        categoryLabel: 'Rough Cut Lumber',
+        images: ['images/catalog/rough-cut-lumber.jpg', 'images/catalog/lumber-yard.jpg'],
+        description: 'Full-dimension 2x10 rough cut lumber for heavy structural and industrial applications. Fresh-sawn with natural texture and full nominal dimensions. Available green or air-dried in custom lengths.',
+        specs: ['2" x 10" full dimension', 'Green or air-dried', 'Custom lengths available']
+    },
+    'rough-4x8': {
+        name: '4x8 Rough Cut Lumber',
+        category: 'rough-lumber',
+        categoryLabel: 'Rough Cut Lumber',
+        images: ['images/catalog/rough-cut-lumber.jpg', 'images/catalog/lumber-yard.jpg'],
+        description: 'Heavy-duty 4x8 rough cut lumber for mine timbering, heavy framing, and industrial construction. Full nominal dimensions provide maximum structural capacity. Available green or air-dried, custom cut to length.',
+        specs: ['4" x 8" full dimension', 'Green or air-dried', 'Custom lengths available', 'Mine timbering grade available']
+    },
+    'rough-2x8': {
+        name: '2x8 Rough Cut Lumber',
+        category: 'rough-lumber',
+        categoryLabel: 'Rough Cut Lumber',
+        images: ['images/catalog/rough-cut-lumber.jpg', 'images/catalog/lumber-yard.jpg'],
+        description: 'Full-dimension 2x8 rough cut lumber for framing, industrial shelving, and general construction where full nominal dimensions are preferred. Available green or air-dried in custom lengths.',
+        specs: ['2" x 8" full dimension', 'Green or air-dried', 'Custom lengths available']
+    },
+    'rough-2x6': {
+        name: '2x6 Rough Cut Lumber',
+        category: 'rough-lumber',
+        categoryLabel: 'Rough Cut Lumber',
+        images: ['images/catalog/rough-cut-lumber.jpg', 'images/catalog/lumber-yard.jpg'],
+        description: 'Versatile 2x6 rough cut lumber for general framing, crating, and industrial applications. Full nominal dimensions with natural sawmill finish. Available green or air-dried in standard and custom lengths.',
+        specs: ['2" x 6" full dimension', 'Green or air-dried', 'Custom lengths available']
+    },
+    'rough-2x4': {
+        name: '2x4 Rough Cut Lumber',
+        category: 'rough-lumber',
+        categoryLabel: 'Rough Cut Lumber',
+        images: ['images/catalog/rough-cut-lumber.jpg', 'images/catalog/lumber-yard.jpg'],
+        description: 'Full-dimension 2x4 rough cut lumber for crating, framing, and general construction where a rough finish and full nominal dimensions are acceptable. Available green or air-dried in custom lengths.',
+        specs: ['2" x 4" full dimension', 'Green or air-dried', 'Custom lengths available']
+    },
+    'rough-3x10': {
+        name: '3x10 Rough Cut Lumber',
+        category: 'rough-lumber',
+        categoryLabel: 'Rough Cut Lumber',
+        images: ['images/catalog/rough-cut-lumber.jpg', 'images/catalog/lumber-yard.jpg'],
+        description: 'Heavy full-dimension 3x10 rough cut lumber for mine timbering, heavy structural supports, and industrial applications requiring maximum cross-section. Available green or air-dried in custom lengths.',
+        specs: ['3" x 10" full dimension', 'Green or air-dried', 'Custom lengths available']
+    },
+    'rough-3x8': {
+        name: '3x8 Rough Cut Lumber',
+        category: 'rough-lumber',
+        categoryLabel: 'Rough Cut Lumber',
+        images: ['images/catalog/rough-cut-lumber.jpg', 'images/catalog/lumber-yard.jpg'],
+        description: 'Full-dimension 3x8 rough cut lumber for heavy framing, mine supports, and industrial applications. Fresh-sawn with consistent dimensions and natural texture. Available green or air-dried in custom lengths.',
+        specs: ['3" x 8" full dimension', 'Green or air-dried', 'Custom lengths available']
+    },
+
+    // ── ROUGH CUT TIMBERS ────────────────────────────────────────────
+    'timber-4x4': {
+        name: '4x4 Rough Cut Timber',
+        category: 'rough-timbers',
+        categoryLabel: 'Rough Cut Timbers',
+        images: ['images/catalog/rough-cut-lumber.jpg'],
+        description: 'Full-dimension 4x4 rough cut timber for posts, fencing, mine timbering, and structural applications. Fresh-sawn from Canadian spruce and pine. Available in custom lengths with volume pricing for large orders.',
+        specs: ['4" x 4" full dimension', 'Canadian spruce/pine', 'Custom lengths available', 'Bulk pricing available']
+    },
+    'timber-5x5': {
+        name: '5x5 Rough Cut Timber',
+        category: 'rough-timbers',
+        categoryLabel: 'Rough Cut Timbers',
+        images: ['images/catalog/rough-cut-lumber.jpg'],
+        description: 'Full-dimension 5x5 rough cut timber for heavy structural posts, mine timbering, and industrial framing. Fresh-sawn for maximum structural integrity. Custom lengths available.',
+        specs: ['5" x 5" full dimension', 'Canadian softwood', 'Custom lengths available']
+    },
+    'timber-6x6': {
+        name: '6x6 Rough Cut Timber',
+        category: 'rough-timbers',
+        categoryLabel: 'Rough Cut Timbers',
+        images: ['images/catalog/rough-cut-lumber.jpg'],
+        description: 'Heavy 6x6 rough cut timber for structural columns, mine timbering, bridge components, and industrial construction. Full nominal dimensions from fresh-sawn Canadian softwood. Custom lengths available.',
+        specs: ['6" x 6" full dimension', 'Canadian softwood', 'Custom lengths available', 'Mine timbering grade available']
+    },
+    'timber-8x8': {
+        name: '8x8 Rough Cut Timber',
+        category: 'rough-timbers',
+        categoryLabel: 'Rough Cut Timbers',
+        images: ['images/catalog/rough-cut-lumber.jpg'],
+        description: 'Massive 8x8 rough cut timber for heavy structural applications, bridge construction, marine use, and large-scale mine timbering. Fresh-sawn for full cross-section dimensions and maximum load capacity. Custom cut to length.',
+        specs: ['8" x 8" full dimension', 'Heavy structural grade', 'Custom lengths available']
+    },
+    'timber-10x10': {
+        name: '10x10 Rough Cut Timber',
+        category: 'rough-timbers',
+        categoryLabel: 'Rough Cut Timbers',
+        images: ['images/catalog/rough-cut-lumber.jpg'],
+        description: 'Our largest standard timber at 10x10 — used for heavy mine timbering, large structural columns, bridge components, and industrial foundations. Fresh-sawn Canadian softwood cut to your required length.',
+        specs: ['10" x 10" full dimension', 'Heavy industrial grade', 'Custom lengths available']
+    },
+
+    // ── PALLETS ──────────────────────────────────────────────────────
+    'pallet-48x48-v2': {
+        name: 'GML 48x48" V2 Pallet',
+        category: 'pallets',
+        categoryLabel: 'Pallets',
+        images: ['images/catalog/pallets-outdoor.jpg'],
+        description: 'The GML 48x48" V2 Pallet is Greg\'s Manufacturing\'s second-generation square pallet, engineered for heavy industrial loads and compatible with standard forklift equipment. Built in-house for consistent quality, it exceeds typical pallet specs for durability in mining, forestry, and industrial shipping applications.',
+        specs: ['48" x 48" footprint', '4-way forklift entry', 'Heavy industrial construction', 'Manufactured in-house']
+    },
+    'pallet-48x48-v1': {
+        name: 'GML 48x48" V1 Pallet',
+        category: 'pallets',
+        categoryLabel: 'Pallets',
+        images: ['images/catalog/pallets-outdoor.jpg'],
+        description: 'The original GML 48x48" V1 Pallet — a proven square pallet design built to handle heavy loads in mining, construction, and industrial logistics. Compatible with standard forklift and pallet jack equipment. Manufactured to consistent quality standards at Greg\'s facility in Cranberry Portage.',
+        specs: ['48" x 48" footprint', '4-way forklift entry', 'Heavy duty construction', 'Bulk quantities available']
+    },
+    'pallet-40x48-v2': {
+        name: 'GML 40x48" V2 Pallet',
+        category: 'pallets',
+        categoryLabel: 'Pallets',
+        images: ['images/catalog/pallets-outdoor.jpg'],
+        description: 'The GML 40x48" V2 Pallet offers a standard rectangular footprint compatible with most industrial racking and transport systems. Second-generation design with improved stringer placement for greater load distribution. Built in-house for tight quality control.',
+        specs: ['40" x 48" footprint', '4-way forklift entry', 'Improved V2 design', 'Manufactured in-house']
+    },
+    'pallet-40x48-v1': {
+        name: 'GML 40x48" V1 Pallet',
+        category: 'pallets',
+        categoryLabel: 'Pallets',
+        images: ['images/catalog/pallets-outdoor.jpg'],
+        description: 'The GML 40x48" V1 Pallet — the original rectangular pallet from Greg\'s Manufacturing. Standard dimensions compatible with most North American racking and logistics systems. Built to handle the rigors of industrial shipping and warehousing.',
+        specs: ['40" x 48" footprint', '4-way forklift entry', 'Heavy duty construction', 'Bulk quantities available']
+    }
+};
+
+// ============================================================
+//  RENDER PRODUCT PAGE
+// ============================================================
+(function() {
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id');
+    const product = id ? PRODUCTS[id] : null;
+
+    const detailEl = document.getElementById('product-detail');
+    const notFoundEl = document.getElementById('product-not-found');
+    const relatedEl = document.getElementById('product-related');
+
+    if (!product) {
+        detailEl.style.display = 'none';
+        document.getElementById('product-breadcrumb').style.display = 'none';
+        notFoundEl.style.display = 'block';
+        document.getElementById('page-title').textContent = 'Product Not Found | Greg\'s Manufacturing';
+        return;
+    }
+
+    // ── Page meta ─────────────────────────────────────────────
+    document.getElementById('page-title').textContent = product.name + ' | Greg\'s Manufacturing';
+    document.getElementById('page-meta').setAttribute('content',
+        product.description.substring(0, 155).replace(/"/g, "'") + '...'
+    );
+
+    // ── Breadcrumb ────────────────────────────────────────────
+    const catLink = document.getElementById('breadcrumb-category');
+    catLink.textContent = product.categoryLabel;
+    catLink.href = 'shop.html#' + product.category;
+    document.getElementById('breadcrumb-product').textContent = product.name;
+
+    // ── Image (Gallery) ────────────────────────────────────────
+    const imageWrap = document.getElementById('product-image-wrap');
+    const imgs = product.images || [];
+    if (imgs.length === 0) {
+        const div = document.createElement('div');
+        div.className = 'product-detail-placeholder';
+        div.innerHTML = product.placeholderSvg || PLACEHOLDER_SVG_GENERIC;
+        imageWrap.appendChild(div);
+    } else if (imgs.length === 1) {
+        const gallery = document.createElement('div');
+        gallery.className = 'product-gallery';
+        const mainDiv = document.createElement('div');
+        mainDiv.className = 'product-gallery-main';
+        const img = document.createElement('img');
+        img.id = 'gallery-main-img';
+        img.src = imgs[0];
+        img.alt = product.name;
+        img.loading = 'eager';
+        mainDiv.appendChild(img);
+        gallery.appendChild(mainDiv);
+        imageWrap.appendChild(gallery);
+    } else {
+        const gallery = document.createElement('div');
+        gallery.className = 'product-gallery';
+        const mainDiv = document.createElement('div');
+        mainDiv.className = 'product-gallery-main';
+        const img = document.createElement('img');
+        img.id = 'gallery-main-img';
+        img.src = imgs[0];
+        img.alt = product.name;
+        img.loading = 'eager';
+        mainDiv.appendChild(img);
+        gallery.appendChild(mainDiv);
+
+        const thumbsDiv = document.createElement('div');
+        thumbsDiv.className = 'product-gallery-thumbs';
+        imgs.forEach(function(src, idx) {
+            const thumb = document.createElement('img');
+            thumb.className = 'gallery-thumb' + (idx === 0 ? ' active' : '');
+            thumb.src = src;
+            thumb.alt = product.name + ' view ' + (idx + 1);
+            thumb.setAttribute('data-full', src);
+            thumb.addEventListener('click', function() {
+                const mainImg = document.getElementById('gallery-main-img');
+                mainImg.classList.add('fading');
+                setTimeout(function() {
+                    mainImg.src = this.getAttribute('data-full');
+                    mainImg.classList.remove('fading');
+                }.bind(this), 180);
+                document.querySelectorAll('.gallery-thumb').forEach(function(t) {
+                    t.classList.remove('active');
+                });
+                this.classList.add('active');
+            });
+            thumbsDiv.appendChild(thumb);
+        });
+        gallery.appendChild(thumbsDiv);
+        imageWrap.appendChild(gallery);
+    }
+
+    // ── Info ──────────────────────────────────────────────────
+    document.getElementById('product-category-badge').textContent = product.categoryLabel;
+    document.getElementById('product-name').textContent = product.name;
+    document.getElementById('product-description').textContent = product.description;
+    document.getElementById('product-price').textContent = 'Quote on Request';
+
+    // Back to catalogue link
+    document.getElementById('back-to-catalogue').href = 'shop.html#' + product.category;
+
+    // ── Specs (if any) ────────────────────────────────────────
+    if (product.specs && product.specs.length) {
+        const specsEl = document.createElement('ul');
+        specsEl.className = 'product-specs';
+        product.specs.forEach(function(s) {
+            const li = document.createElement('li');
+            li.textContent = s;
+            specsEl.appendChild(li);
+        });
+        const descEl = document.getElementById('product-description');
+        descEl.after(specsEl);
+    }
+
+    // ── Related products ──────────────────────────────────────
+    const siblings = Object.entries(PRODUCTS).filter(function(entry) {
+        return entry[0] !== id && entry[1].category === product.category;
+    }).slice(0, 4);
+
+    if (siblings.length > 0) {
+        relatedEl.style.display = 'block';
+        document.getElementById('related-category-label').textContent = product.categoryLabel;
+        document.getElementById('related-view-all').href = 'shop.html#' + product.category;
+
+        const grid = document.getElementById('related-grid');
+        siblings.forEach(function(entry) {
+            const sibId = entry[0];
+            const sib = entry[1];
+            const card = document.createElement('a');
+            card.href = 'product?id=' + sibId;
+            card.className = 'product-grid-card';
+            card.style.textDecoration = 'none';
+
+            const sibImgs = sib.images || [];
+            if (sibImgs.length > 0) {
+                const img = document.createElement('img');
+                img.className = 'product-thumb';
+                img.src = sibImgs[0];
+                img.alt = sib.name;
+                card.appendChild(img);
+            } else {
+                const ph = document.createElement('div');
+                ph.className = 'placeholder-img';
+                ph.innerHTML = sib.placeholderSvg || PLACEHOLDER_SVG_GENERIC;
+                card.appendChild(ph);
+            }
+
+            const h3 = document.createElement('h3');
+            h3.textContent = sib.name;
+            const price = document.createElement('span');
+            price.className = 'price';
+            price.textContent = 'Quote on Request';
+            card.appendChild(h3);
+            card.appendChild(price);
+            grid.appendChild(card);
+        });
+    }
+})();
+</script>
+</body>
+</html>

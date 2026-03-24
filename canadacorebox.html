@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CanadaCoreBox | Greg's Manufacturing</title>
+    <meta name="description" content="CanadaCoreBox by Greg's Manufacturing — precision plywood and dimensional lumber core boxes for mineral exploration. AQ, BQ, NQ, HQ, and PQ sizes. Made in Manitoba.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,400;1,700&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css?v=13">
+    <style>
+
+/* ══════════════════════════════════════════
+   CCB PAGE — Complete Rework
+   ══════════════════════════════════════════ */
+
+/* ── 1. HERO ── */
+.ccb-hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 620px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: #1D0E03;
+    padding: 0;
+}
+.ccb-hero-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.ccb-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        105deg,
+        rgba(29,14,3,0.88) 0%,
+        rgba(29,14,3,0.60) 45%,
+        rgba(29,14,3,0.18) 100%
+    );
+    z-index: 1;
+}
+.ccb-hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 80px;
+    max-width: 760px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    width: 100%;
+}
+.ccb-hero-eyebrow {
+    font-family: var(--font-body);
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.50);
+    margin-bottom: 22px;
+    display: block;
+}
+.ccb-hero .ccb-hero-title {
+    font-family: var(--font-heading);
+    font-size: clamp(64px, 7.5vw, 112px);
+    font-weight: 700;
+    font-style: italic;
+    line-height: 0.92;
+    color: #fff;
+    letter-spacing: -0.02em;
+    margin: 0 0 28px 0;
+    text-transform: uppercase;
+}
+.ccb-hero-title em {
+    font-style: italic;
+    color: #c4a882;
+}
+.ccb-hero-sub {
+    font-family: var(--font-body);
+    font-size: 17px;
+    line-height: 1.65;
+    color: rgba(255,255,255,0.72);
+    max-width: 460px;
+    margin: 0 0 40px 0;
+}
+.ccb-hero-ctas {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.ccb-cta-solid {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    background: #fff;
+    color: #1D0E03;
+    padding: 15px 32px;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+.ccb-cta-solid:hover { background: #e8ddd3; }
+.ccb-cta-ghost {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    border: 1.5px solid rgba(255,255,255,0.35);
+    color: rgba(255,255,255,0.80);
+    padding: 14px 32px;
+    text-decoration: none;
+    transition: border-color 0.2s, color 0.2s;
+}
+.ccb-cta-ghost:hover { border-color: rgba(255,255,255,0.75); color: #fff; }
+
+/* Scroll indicator */
+.ccb-scroll-hint {
+    position: absolute;
+    bottom: 36px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    animation: ccbBounce 2.2s ease-in-out infinite;
+}
+@keyframes ccbBounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); opacity: 0.5; }
+    50% { transform: translateX(-50%) translateY(10px); opacity: 0.9; }
+}
+
+/* ── 2. STATS STRIP ── */
+.ccb-stats {
+    background: #1D0E03;
+    display: flex;
+    align-items: stretch;
+    border-top: 1px solid rgba(255,255,255,0.06);
+}
+.ccb-stat {
+    flex: 1;
+    padding: 44px 40px;
+    text-align: center;
+    position: relative;
+}
+.ccb-stat + .ccb-stat::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 24px;
+    bottom: 24px;
+    width: 1px;
+    background: rgba(255,255,255,0.10);
+}
+.ccb-stat-num {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: clamp(38px, 4vw, 56px);
+    font-weight: 700;
+    font-style: italic;
+    color: #c4a882;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+.ccb-stat-label {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.40);
+}
+
+/* ── 3. SHOWCASE (editorial two-col) ── */
+.ccb-showcase {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 580px;
+    background: #f5f0e8;
+}
+.ccb-showcase-img {
+    overflow: hidden;
+    position: relative;
+}
+.ccb-showcase-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 0.6s ease;
+}
+.ccb-showcase-img:hover img { transform: scale(1.03); }
+
+.ccb-showcase-body {
+    padding: 80px 72px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #f5f0e8;
+}
+.ccb-section-label {
+    font-family: var(--font-body);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(29,14,3,0.38);
+    margin-bottom: 20px;
+    display: block;
+}
+.ccb-showcase-body h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(28px, 3vw, 44px);
+    font-weight: 700;
+    color: #1D0E03;
+    line-height: 1.1;
+    margin: 0 0 22px 0;
+    letter-spacing: -0.01em;
+}
+.ccb-showcase-body p {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.72;
+    color: rgba(29,14,3,0.68);
+    margin: 0 0 32px 0;
+    max-width: 460px;
+}
+.ccb-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.ccb-features li {
+    font-family: var(--font-body);
+    font-size: 14px;
+    color: rgba(29,14,3,0.75);
+    padding-left: 22px;
+    position: relative;
+    line-height: 1.5;
+}
+.ccb-features li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: #c4a882;
+    font-weight: 700;
+}
+
+/* ── 4. VARIANTS SECTION ── */
+.ccb-variants {
+    background: #160c02;
+    padding: 80px 60px 80px;
+}
+.ccb-variants-top {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 52px;
+}
+.ccb-variants-top h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(30px, 3.5vw, 48px);
+    font-weight: 700;
+    font-style: italic;
+    color: #fff;
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    margin: 0;
+}
+.ccb-variants-top .section-label-light {
+    font-family: var(--font-body);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.30);
+    margin-bottom: 14px;
+    display: block;
+}
+.ccb-view-all {
+    font-family: var(--font-body);
+    font-size: 12px;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.20);
+    padding-bottom: 2px;
+    transition: color 0.2s, border-color 0.2s;
+    white-space: nowrap;
+    margin-bottom: 6px;
+}
+.ccb-view-all:hover { color: rgba(255,255,255,0.85); border-color: rgba(255,255,255,0.50); }
+
+.ccb-variant-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+}
+.ccb-variant-card {
+    background: #1D1008;
+    overflow: hidden;
+    position: relative;
+    cursor: default;
+    display: flex;
+    flex-direction: column;
+}
+.ccb-variant-img {
+    background: #f0ebe3;
+    padding: 36px 28px 28px;
+    overflow: hidden;
+}
+.ccb-variant-img img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.4s ease;
+}
+.ccb-variant-card:hover .ccb-variant-img img { transform: scale(1.05); }
+.ccb-variant-info {
+    padding: 28px 32px 36px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid rgba(255,255,255,0.06);
+}
+.ccb-variant-tag {
+    font-family: var(--font-body);
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #c4a882;
+    margin-bottom: 10px;
+    display: block;
+}
+.ccb-variant-name {
+    font-family: var(--font-heading);
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 16px 0;
+    line-height: 1.15;
+}
+.ccb-variant-sizes {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+}
+.ccb-size-chip {
+    font-family: var(--font-body);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.65);
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    padding: 4px 10px;
+}
+.ccb-variant-desc {
+    font-family: var(--font-body);
+    font-size: 13px;
+    color: rgba(255,255,255,0.38);
+    line-height: 1.55;
+    margin: 0;
+    margin-top: auto;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+/* ── 5. FULL-WIDTH REAL PHOTO ── */
+.ccb-photo-band {
+    position: relative;
+    height: 520px;
+    overflow: hidden;
+    background: #1D0E03;
+}
+.ccb-photo-band img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 10%;
+    display: block;
+    filter: brightness(1.18) contrast(1.05);
+}
+.ccb-photo-band-caption {
+    position: absolute;
+    bottom: 36px;
+    left: 60px;
+    font-family: var(--font-body);
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.55);
+}
+
+/* ── 6. SPECS TABLE ── */
+.ccb-specs {
+    background: #fff;
+    padding: 88px 60px;
+}
+.ccb-specs-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.ccb-specs-header {
+    margin-bottom: 52px;
+}
+.ccb-specs-header h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(28px, 3vw, 42px);
+    font-weight: 700;
+    color: #1D0E03;
+    margin: 0 0 10px 0;
+    line-height: 1.1;
+}
+.ccb-specs-header p {
+    font-family: var(--font-body);
+    font-size: 15px;
+    color: rgba(29,14,3,0.50);
+    margin: 0;
+}
+.ccb-size-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--font-body);
+}
+.ccb-size-table thead tr {
+    border-bottom: 2px solid #1D0E03;
+}
+.ccb-size-table thead th {
+    font-family: var(--font-heading);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #1D0E03;
+    padding: 0 24px 18px 0;
+    text-align: left;
+}
+.ccb-size-table thead th:first-child {
+    padding-left: 0;
+    min-width: 200px;
+}
+.ccb-size-table thead th:not(:first-child) {
+    text-align: center;
+    min-width: 90px;
+}
+.ccb-size-table tbody tr {
+    border-bottom: 1px solid #ebebeb;
+    transition: background 0.15s;
+}
+.ccb-size-table tbody tr:hover { background: #faf8f5; }
+.ccb-size-table tbody td {
+    padding: 22px 24px 22px 0;
+    font-size: 15px;
+    color: rgba(29,14,3,0.75);
+}
+.ccb-size-table tbody td:first-child {
+    padding-left: 0;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 15px;
+    color: #1D0E03;
+}
+.ccb-size-table tbody td:not(:first-child) {
+    text-align: center;
+}
+.check-yes {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background: #1D0E03;
+    border-radius: 50%;
+    position: relative;
+}
+.check-yes::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -56%) rotate(45deg);
+    width: 5px;
+    height: 9px;
+    border-right: 1.8px solid #fff;
+    border-bottom: 1.8px solid #fff;
+}
+.check-no {
+    display: inline-block;
+    width: 18px;
+    height: 1px;
+    background: rgba(29,14,3,0.18);
+    vertical-align: middle;
+}
+
+/* Size legend */
+.ccb-size-legend {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1px;
+    margin-top: 40px;
+    background: #e8e4df;
+    border: 1px solid #e8e4df;
+}
+.ccb-size-def {
+    background: #faf8f5;
+    padding: 20px 20px;
+    text-align: center;
+}
+.ccb-size-def .size-code {
+    font-family: var(--font-heading);
+    font-size: 18px;
+    font-weight: 700;
+    color: #1D0E03;
+    display: block;
+    margin-bottom: 5px;
+}
+.ccb-size-def .size-dia {
+    font-family: var(--font-body);
+    font-size: 12px;
+    color: rgba(29,14,3,0.45);
+}
+
+/* ── 7. KEY FEATURES ── */
+.ccb-feats {
+    background: #f5f0e8;
+    padding: 80px 60px;
+    border-top: 1px solid #e8e0d4;
+}
+.ccb-feats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.ccb-feat {
+    padding: 0 48px 0 0;
+    border-right: 1px solid rgba(29,14,3,0.10);
+}
+.ccb-feat:last-child { border-right: none; padding-right: 0; }
+.ccb-feat:not(:first-child) { padding-left: 48px; }
+.ccb-feat-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 20px;
+}
+.ccb-feat-icon svg {
+    width: 40px;
+    height: 40px;
+}
+.ccb-feat h4 {
+    font-family: var(--font-heading);
+    font-size: 15px;
+    font-weight: 700;
+    color: #1D0E03;
+    margin: 0 0 10px 0;
+    letter-spacing: -0.01em;
+}
+.ccb-feat p {
+    font-family: var(--font-body);
+    font-size: 13px;
+    line-height: 1.65;
+    color: rgba(29,14,3,0.58);
+    margin: 0;
+}
+
+/* ── 8. FINAL CTA ── */
+.ccb-final-cta {
+    background: #1D0E03;
+    padding: 100px 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.ccb-final-cta::before {
+    content: 'CCB';
+    position: absolute;
+    font-family: var(--font-heading);
+    font-size: 280px;
+    font-weight: 700;
+    font-style: italic;
+    color: rgba(255,255,255,0.025);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    pointer-events: none;
+    letter-spacing: -0.04em;
+}
+.ccb-final-cta .section-label-light {
+    font-family: var(--font-body);
+    font-size: 11px;
+    letter-spacing: 0.20em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.30);
+    margin-bottom: 22px;
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+.ccb-final-cta h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(32px, 4vw, 56px);
+    font-weight: 700;
+    font-style: italic;
+    color: #fff;
+    line-height: 1.1;
+    margin: 0 0 14px 0;
+    letter-spacing: -0.01em;
+    position: relative;
+    z-index: 1;
+}
+.ccb-final-cta .cta-sub {
+    font-family: var(--font-body);
+    font-size: 16px;
+    color: rgba(255,255,255,0.50);
+    margin: 0 0 48px 0;
+    position: relative;
+    z-index: 1;
+}
+.ccb-cta-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+}
+.ccb-phone-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-heading);
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    background: rgba(255,255,255,0.06);
+    border: 1.5px solid rgba(255,255,255,0.18);
+    padding: 18px 36px;
+    transition: background 0.2s, border-color 0.2s;
+    letter-spacing: -0.01em;
+}
+.ccb-phone-btn:hover { background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.40); }
+.ccb-phone-btn svg {
+    width: 18px;
+    height: 18px;
+    stroke: rgba(255,255,255,0.70);
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+.ccb-msg-btn {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.60);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.20);
+    padding-bottom: 2px;
+    transition: color 0.2s, border-color 0.2s;
+}
+.ccb-msg-btn:hover { color: rgba(255,255,255,0.90); border-color: rgba(255,255,255,0.50); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+    .ccb-hero-content { padding: 0 48px; }
+    .ccb-variants { padding: 64px 32px; }
+    .ccb-feats-grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+    .ccb-feat { border-right: none; padding-right: 0 !important; padding-left: 0 !important; }
+    .ccb-feat:nth-child(1), .ccb-feat:nth-child(2) { border-bottom: 1px solid rgba(29,14,3,0.10); padding-bottom: 40px; }
+}
+@media (max-width: 860px) {
+    .ccb-showcase { grid-template-columns: 1fr; }
+    .ccb-showcase-img { min-height: 340px; }
+    .ccb-showcase-body { padding: 52px 36px; }
+    .ccb-variant-grid { grid-template-columns: 1fr; gap: 2px; }
+    .ccb-variants-top { flex-direction: column; align-items: flex-start; gap: 20px; }
+    .ccb-size-legend { grid-template-columns: repeat(3, 1fr); }
+    .ccb-stats { flex-direction: column; }
+    .ccb-stat + .ccb-stat::before { display: none; }
+    .ccb-stat { border-top: 1px solid rgba(255,255,255,0.06); }
+    .ccb-specs { padding: 64px 28px; }
+    .ccb-feats { padding: 64px 28px; }
+    .ccb-final-cta { padding: 72px 28px; }
+}
+@media (max-width: 600px) {
+    .ccb-hero-content { padding: 0 28px; }
+    .ccb-hero-title { font-size: 58px; }
+    .ccb-photo-band { height: 360px; }
+    .ccb-photo-band-caption { left: 28px; bottom: 24px; }
+    .ccb-size-legend { grid-template-columns: repeat(3, 1fr); }
+}
+
+    </style>
+</head>
+<body>
+
+<!-- NAV OVERLAY (mobile) -->
+<div class="nav-overlay"></div>
+
+<!-- HEADER -->
+<header class="navbar">
+    <div class="navbar-container">
+        <a href="index.html" class="navbar-logo">
+            <img src="https://static.wixstatic.com/media/cbf3d6_d84fb97ebce346318b91014af316a2ef~mv2.webp/v1/fill/w_68,h_68,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/cbf3d6_d84fb97ebce346318b91014af316a2ef~mv2.webp" alt="Greg's Manufacturing" width="34" height="34">
+        </a>
+        <nav class="navbar-nav">
+            <a href="canadacorebox.html" class="nav-link" style="font-weight:600;">CanadaCoreBox</a>
+            <a href="shop.html" class="nav-link">Catalogue</a>
+            <a href="about.html" class="nav-link">About Us</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+        <div class="navbar-phone">
+            <a href="tel:+12044722217"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-right:5px;vertical-align:middle;opacity:0.7"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.11 12 19.79 19.79 0 0 1 1 4.18 2 2 0 0 1 3 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>204-472-2217</a>
+        </div>
+        <div class="navbar-social-icons">
+            <a href="https://www.facebook.com/GregsManufacturing" target="_blank" rel="noopener" aria-label="Facebook">
+                <svg viewBox="0 0 24 24" width="18" height="18"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" fill="#1D0E03"/></svg>
+            </a>
+        </div>
+        <button class="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</header>
+
+<!-- ════════════════════════════════════
+     1. HERO — Full viewport video
+     ════════════════════════════════════ -->
+<section class="ccb-hero">
+    <video class="ccb-hero-video" autoplay muted loop playsinline>
+        <source src="videos/studio-comped.mp4" type="video/mp4">
+    </video>
+    <div class="ccb-hero-overlay"></div>
+    <div class="ccb-hero-content">
+        <span class="ccb-hero-eyebrow">Greg's Manufacturing — Flagship Product</span>
+        <h1 class="ccb-hero-title">Canada<br><em>Core</em>Box</h1>
+        <p class="ccb-hero-sub">Precision core sample storage boxes, made from kiln-dried Canadian spruce. Built for the drill site. Trusted across Canada.</p>
+        <div class="ccb-hero-ctas">
+            <a href="contact.html" class="ccb-cta-solid">Get a Quote</a>
+            <a href="#variants" class="ccb-cta-ghost">View Products ↓</a>
+        </div>
+    </div>
+    <a href="#stats" class="ccb-scroll-hint" aria-label="Scroll down">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M8 11l4 4 4-4"/>
+        </svg>
+    </a>
+</section>
+
+<!-- ════════════════════════════════════
+     2. STATS STRIP
+     ════════════════════════════════════ -->
+<div class="ccb-stats" id="stats">
+    <div class="ccb-stat animate-on-scroll">
+        <span class="ccb-stat-num">1934</span>
+        <span class="ccb-stat-label">In production since</span>
+    </div>
+    <div class="ccb-stat animate-on-scroll" data-delay="80">
+        <span class="ccb-stat-num">5</span>
+        <span class="ccb-stat-label">Core sizes covered</span>
+    </div>
+    <div class="ccb-stat animate-on-scroll" data-delay="160">
+        <span class="ccb-stat-num">3</span>
+        <span class="ccb-stat-label">Product formats</span>
+    </div>
+    <div class="ccb-stat animate-on-scroll" data-delay="240">
+        <span class="ccb-stat-num">MB</span>
+        <span class="ccb-stat-label">Made in Manitoba</span>
+    </div>
+</div>
+
+<!-- ════════════════════════════════════
+     3. SHOWCASE — Editorial two-col
+     ════════════════════════════════════ -->
+<section class="ccb-showcase">
+    <div class="ccb-showcase-img">
+        <img src="images/catalog/ccb-render-hero.jpg" alt="CanadaCoreBox product render" loading="lazy">
+    </div>
+    <div class="ccb-showcase-body animate-on-scroll">
+        <span class="ccb-section-label">The Product</span>
+        <h2>Built for the way<br>mining really works.</h2>
+        <p>CanadaCoreBox is our flagship line — wooden core sample storage boxes engineered for mineral exploration programs from regional greenfields to major drill campaigns. Made from kiln-dried Canadian spruce with CNC-machined channels, each box is designed to protect your core through transport, storage, and long-term archiving.</p>
+        <ul class="ccb-features">
+            <li>Kiln-dried Canadian spruce — dimensionally stable, resists warping in field conditions</li>
+            <li>CNC-machined channels — consistent, precise spacing for all core diameters</li>
+            <li>Stackable tapered edges — stable multi-box storage on-site and in transit</li>
+            <li>Custom site-identification stamping available on request</li>
+        </ul>
+    </div>
+</section>
+
+<!-- ════════════════════════════════════
+     4. VARIANTS
+     ════════════════════════════════════ -->
+<section class="ccb-variants" id="variants">
+    <div class="ccb-variants-top">
+        <div>
+            <span class="section-label-light">Choose Your Format</span>
+            <h2>Three Variants.<br>Every Program Covered.</h2>
+        </div>
+        <a href="shop.html" class="ccb-view-all">View All in Catalogue →</a>
+    </div>
+
+    <div class="ccb-variant-grid">
+
+        <!-- 2×8" — Most Popular -->
+        <div class="ccb-variant-card animate-on-scroll" data-delay="0">
+            <div class="ccb-variant-img">
+                <img src="images/catalog/ccb-render-4groove.jpg" alt="2×8 CanadaCoreBox dimensional lumber">
+            </div>
+            <div class="ccb-variant-info">
+                <span class="ccb-variant-tag">Most Popular</span>
+                <h3 class="ccb-variant-name">2×8″ Dimensional</h3>
+                <div class="ccb-variant-sizes">
+                    <span class="ccb-size-chip">AQ</span>
+                    <span class="ccb-size-chip">BQ</span>
+                    <span class="ccb-size-chip">NQ</span>
+                    <span class="ccb-size-chip">NQ2</span>
+                    <span class="ccb-size-chip">HQ</span>
+                </div>
+                <p class="ccb-variant-desc">Wide-format tray for larger diameter core. Precision CNC-machined channels, stackable tapered edges, kiln-dried spruce.</p>
+            </div>
+        </div>
+
+        <!-- 2×6" — Compact -->
+        <div class="ccb-variant-card animate-on-scroll" data-delay="100">
+            <div class="ccb-variant-img">
+                <img src="images/catalog/ccb-render-3groove.jpg" alt="2×6 CanadaCoreBox dimensional lumber">
+            </div>
+            <div class="ccb-variant-info">
+                <span class="ccb-variant-tag">Compact Format</span>
+                <h3 class="ccb-variant-name">2×6″ Dimensional</h3>
+                <div class="ccb-variant-sizes">
+                    <span class="ccb-size-chip">AQ</span>
+                    <span class="ccb-size-chip">BQ</span>
+                    <span class="ccb-size-chip">NQ</span>
+                    <span class="ccb-size-chip">NQ2</span>
+                </div>
+                <p class="ccb-variant-desc">Lightweight, compact tray optimized for AQ–NQ core. Ideal for helicopter and remote site transport.</p>
+            </div>
+        </div>
+
+        <!-- Plywood — Archive -->
+        <div class="ccb-variant-card ccb-variant-card--light animate-on-scroll" data-delay="200">
+            <div class="ccb-variant-img">
+                <img src="images/catalog/ccb-render-flat.jpg" alt="Plywood CanadaCoreBox">
+            </div>
+            <div class="ccb-variant-info">
+                <span class="ccb-variant-tag">Long-Term Archive</span>
+                <h3 class="ccb-variant-name">Plywood</h3>
+                <div class="ccb-variant-sizes">
+                    <span class="ccb-size-chip">NQ</span>
+                    <span class="ccb-size-chip">HQ</span>
+                    <span class="ccb-size-chip">PQ</span>
+                </div>
+                <p class="ccb-variant-desc">Heavy-duty plywood for long-term core archiving. Moisture-resistant finish, CNC-routed channels, palletizable.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ════════════════════════════════════
+     5. FULL-WIDTH REAL PHOTO
+     ════════════════════════════════════ -->
+<div class="ccb-photo-band">
+    <img src="images/catalog/ccb-real-stacked.jpg" alt="CanadaCoreBox stacked boxes at facility" loading="lazy">
+    <span class="ccb-photo-band-caption">Manufactured in Cranberry Portage, Manitoba</span>
+</div>
+
+<!-- ════════════════════════════════════
+     6. SPECS TABLE
+     ════════════════════════════════════ -->
+<section class="ccb-specs" id="specs">
+    <div class="ccb-specs-inner">
+        <div class="ccb-specs-header animate-on-scroll">
+            <span class="ccb-section-label">Specifications</span>
+            <h2>Sizes &amp; Availability</h2>
+            <p>All three formats are available to order. Contact us for lead times and pricing.</p>
+        </div>
+
+        <table class="ccb-size-table animate-on-scroll">
+            <thead>
+                <tr>
+                    <th>Format</th>
+                    <th>AQ</th>
+                    <th>BQ</th>
+                    <th>NQ / NQ2</th>
+                    <th>HQ</th>
+                    <th>PQ</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2×8″ Dimensional</td>
+                    <td><span class="check-yes"></span></td>
+                    <td><span class="check-yes"></span></td>
+                    <td><span class="check-yes"></span></td>
+                    <td><span class="check-yes"></span></td>
+                    <td><span class="check-no"></span></td>
+                </tr>
+                <tr>
+                    <td>2×6″ Dimensional</td>
+                    <td><span class="check-yes"></span></td>
+                    <td><span class="check-yes"></span></td>
+                    <td><span class="check-yes"></span></td>
+                    <td><span class="check-no"></span></td>
+                    <td><span class="check-no"></span></td>
+                </tr>
+                <tr>
+                    <td>Plywood</td>
+                    <td><span class="check-no"></span></td>
+                    <td><span class="check-no"></span></td>
+                    <td><span class="check-yes"></span></td>
+                    <td><span class="check-yes"></span></td>
+                    <td><span class="check-yes"></span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Size reference -->
+        <div class="ccb-size-legend animate-on-scroll">
+            <div class="ccb-size-def">
+                <span class="size-code">AQ</span>
+                <span class="size-dia">27.0 mm core</span>
+            </div>
+            <div class="ccb-size-def">
+                <span class="size-code">BQ</span>
+                <span class="size-dia">36.5 mm core</span>
+            </div>
+            <div class="ccb-size-def">
+                <span class="size-code">NQ</span>
+                <span class="size-dia">47.6 mm core</span>
+            </div>
+            <div class="ccb-size-def">
+                <span class="size-code">HQ</span>
+                <span class="size-dia">63.5 mm core</span>
+            </div>
+            <div class="ccb-size-def">
+                <span class="size-code">PQ</span>
+                <span class="size-dia">85.0 mm core</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ════════════════════════════════════
+     7. KEY FEATURES STRIP
+     ════════════════════════════════════ -->
+<section class="ccb-feats animate-on-scroll">
+    <div class="ccb-feats-grid">
+
+        <div class="ccb-feat">
+            <div class="ccb-feat-icon">
+                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="4" y="10" width="32" height="7" rx="1.5" fill="none" stroke="#1D0E03" stroke-width="1.8"/>
+                    <rect x="4" y="22" width="32" height="7" rx="1.5" fill="none" stroke="#1D0E03" stroke-width="1.8"/>
+                    <line x1="10" y1="10" x2="10" y2="17" stroke="#1D0E03" stroke-width="1.2" opacity="0.3"/>
+                    <line x1="20" y1="10" x2="20" y2="17" stroke="#1D0E03" stroke-width="1.2" opacity="0.3"/>
+                    <line x1="30" y1="10" x2="30" y2="17" stroke="#1D0E03" stroke-width="1.2" opacity="0.3"/>
+                    <line x1="10" y1="22" x2="10" y2="29" stroke="#1D0E03" stroke-width="1.2" opacity="0.3"/>
+                    <line x1="20" y1="22" x2="20" y2="29" stroke="#1D0E03" stroke-width="1.2" opacity="0.3"/>
+                    <line x1="30" y1="22" x2="30" y2="29" stroke="#1D0E03" stroke-width="1.2" opacity="0.3"/>
+                </svg>
+            </div>
+            <h4>Kiln-Dried Spruce</h4>
+            <p>Canadian spruce dried to precise moisture content. Dimensionally stable — won't warp, split, or swell in field conditions.</p>
+        </div>
+
+        <div class="ccb-feat">
+            <div class="ccb-feat-icon">
+                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="20" cy="20" r="14" stroke="#1D0E03" stroke-width="1.8"/>
+                    <circle cx="20" cy="20" r="3" fill="#1D0E03"/>
+                    <line x1="20" y1="6" x2="20" y2="12" stroke="#1D0E03" stroke-width="1.8" stroke-linecap="round"/>
+                    <line x1="20" y1="28" x2="20" y2="34" stroke="#1D0E03" stroke-width="1.8" stroke-linecap="round"/>
+                    <line x1="6" y1="20" x2="12" y2="20" stroke="#1D0E03" stroke-width="1.8" stroke-linecap="round"/>
+                    <line x1="28" y1="20" x2="34" y2="20" stroke="#1D0E03" stroke-width="1.8" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <h4>CNC-Machined Channels</h4>
+            <p>Every tray is CNC-routed for consistent, repeatable channel spacing calibrated to exact core diameters — AQ through PQ.</p>
+        </div>
+
+        <div class="ccb-feat">
+            <div class="ccb-feat-icon">
+                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="6" y="22" width="28" height="9" rx="1.5" stroke="#1D0E03" stroke-width="1.8"/>
+                    <rect x="9" y="13" width="22" height="9" rx="1.5" stroke="#1D0E03" stroke-width="1.8"/>
+                    <line x1="13" y1="13" x2="13" y2="22" stroke="#1D0E03" stroke-width="1.2" opacity="0.35"/>
+                    <line x1="27" y1="13" x2="27" y2="22" stroke="#1D0E03" stroke-width="1.2" opacity="0.35"/>
+                </svg>
+            </div>
+            <h4>Stackable Design</h4>
+            <p>Tapered edges allow boxes to stack securely without sliding. Palletizable for efficient loading and high-density site storage.</p>
+        </div>
+
+        <div class="ccb-feat">
+            <div class="ccb-feat-icon">
+                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 20 C8 12 14 7 20 7 C26 7 32 12 32 20" stroke="#1D0E03" stroke-width="1.8" stroke-linecap="round"/>
+                    <path d="M10 26 L8 20 L14 21" stroke="#1D0E03" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M20 15 L20 21 L24 24" stroke="#1D0E03" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="20" cy="28" r="5" stroke="#1D0E03" stroke-width="1.8"/>
+                </svg>
+            </div>
+            <h4>Ships Across Canada</h4>
+            <p>Manitoba-manufactured with fast turnaround. We know the exploration calendar — we stock what you need and get it moving.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- ════════════════════════════════════
+     8. FINAL CTA
+     ════════════════════════════════════ -->
+<section class="ccb-final-cta">
+    <span class="section-label-light">Ready to Order?</span>
+    <h2>We'll get you a quote<br>and get product moving.</h2>
+    <p class="cta-sub">Call us direct or send a message — we respond quickly.</p>
+    <div class="ccb-cta-row">
+        <a href="tel:+12044722217" class="ccb-phone-btn">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-1.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            204-472-2217
+        </a>
+        <a href="contact.html" class="ccb-msg-btn">Send a Message →</a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="brush-divider"></div>
+    <div class="footer-content">
+        <div class="footer-logo">
+            <img src="https://static.wixstatic.com/media/cbf3d6_6646ef0430bb4366b4a4011373a65ad4~mv2.png/v1/fill/w_466,h_166,al_c,q_85,usm_0.66_1.00_0.01/cbf3d6_6646ef0430bb4366b4a4011373a65ad4~mv2.png" alt="GML Logo">
+            <p class="footer-tagline">Built in Cranberry Portage, MB.<br>Trusted across the north.</p>
+        </div>
+        <nav class="footer-nav">
+            <a href="canadacorebox.html">CanadaCoreBox</a>
+            <a href="shop.html">Catalogue</a>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About Us</a>
+        </nav>
+        <div class="footer-social">
+            <a href="https://www.facebook.com/GregsManufacturing" target="_blank" rel="noopener" aria-label="Facebook">
+                <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        &copy; 2026 Greg's Manufacturing Limited. All Rights Reserved.
+    </div>
+</footer>
+
+<script src="js/main.js?v=3"></script>
+</body>
+</html>

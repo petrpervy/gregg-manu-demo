@@ -1,0 +1,19 @@
+# Development versions (not for deployment)
+v1-static/
+v2-nextjs/
+v2-nextjs-backup-mar15/
+
+# Internal dev files
+SESSION_LOG.md
+serve.py
+
+# Raw unprocessed assets
+images/New catalog images/
+images/New catalog images-20260304T001108Z-1-001.zip
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
