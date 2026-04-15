@@ -2853,13 +2853,7 @@ a.product-grid-card {
   .mobile-call-bar svg { flex-shrink: 0; opacity: 0.85; }
   .mobile-call-bar span { line-height: 1; }
 
-  /* Hero: kill video, show poster as background */
-  .home-hero-video { display: none; }
-  .home-hero {
-    background-image: url('../images/catalog/truck-mack-winter.jpg');
-    background-size: cover;
-    background-position: center;
-  }
+  /* Hero: keep video playing on mobile (poster is fallback if video fails) */
 
   /* Shop banner video off — dark bg fallback */
   .shop-banner-video { display: none; }
