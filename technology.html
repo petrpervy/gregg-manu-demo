@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technology | Greg's Manufacturing</title>
+    <meta name="description" content="Greg's Manufacturing runs industrial-grade moulding and automation systems to produce high volumes of consistent wood products for mining and exploration across Manitoba.">
+    <meta property="og:title" content="Technology | Greg's Manufacturing">
+    <meta property="og:description" content="Greg's Manufacturing runs industrial-grade moulding and automation systems to produce high volumes of consistent wood products for mining and exploration across Manitoba.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.gregsmanufacturing.ca/technology.html">
+    <meta property="og:image" content="images/wix/tech-hero.png">
+    <link rel="icon" href="images/wix/nav-logo.webp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,400;1,700&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css?v=19">
+    <style>
+
+/* Hero section */
+.tech-hero {
+    display: flex;
+    flex-direction: column;
+    background: var(--dark);
+    min-height: 100svh;
+}
+.tech-hero-img-panel {
+    width: 100%;
+    height: 52vw;
+    min-height: 280px;
+    max-height: 480px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.tech-hero-img-panel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 40%;
+}
+.tech-hero-content-panel {
+    flex: 1;
+    background: var(--dark);
+    display: flex;
+    flex-direction: column;
+    padding: 36px 28px 52px;
+    min-height: 360px;
+}
+.tech-quote-pill {
+    display: inline-block;
+    align-self: flex-end;
+    background: transparent;
+    color: rgba(255,255,255,0.82);
+    border: 1px solid rgba(255,255,255,0.22);
+    padding: 9px 20px;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    transition: background 0.25s ease, border-color 0.25s ease;
+    margin-bottom: 36px;
+    flex-shrink: 0;
+}
+.tech-quote-pill:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: rgba(255,255,255,0.4);
+}
+.tech-hero-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0;
+}
+.tech-eyebrow {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.42);
+    margin-bottom: 16px;
+}
+.tech-hero-heading {
+    font-family: var(--font-heading);
+    font-size: clamp(42px, 8vw, 80px);
+    font-weight: 700;
+    color: #fff;
+    line-height: 0.93;
+    letter-spacing: -0.025em;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+}
+.tech-hero-body {
+    font-family: var(--font-body);
+    font-size: 15px;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.7;
+    max-width: 420px;
+    margin-bottom: 32px;
+}
+.tech-amber-btn {
+    display: inline-block;
+    align-self: flex-start;
+    background: #BF8C14;
+    color: #fff;
+    padding: 14px 26px;
+    font-family: var(--font-heading);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    transition: background 0.25s ease, transform 0.2s ease;
+}
+.tech-amber-btn:hover {
+    background: #A97B0F;
+    transform: translateY(-1px);
+}
+
+@media (min-width: 860px) {
+    .tech-hero {
+        flex-direction: row;
+        min-height: 100svh;
+    }
+    .tech-hero-img-panel {
+        width: 55%;
+        height: auto;
+        max-height: none;
+        min-height: 100svh;
+    }
+    .tech-hero-content-panel {
+        width: 45%;
+        padding: 52px 64px 64px;
+        min-height: 100svh;
+    }
+    .tech-hero-heading {
+        font-size: clamp(52px, 5.5vw, 84px);
+    }
+}
+
+/* Custom wood products section */
+.tech-products {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+}
+.tech-products-text {
+    padding: 60px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    order: 1;
+}
+.tech-products-img-panel {
+    width: 100%;
+    height: 56vw;
+    min-height: 260px;
+    max-height: 460px;
+    overflow: hidden;
+    order: 2;
+    flex-shrink: 0;
+}
+.tech-products-img-panel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.7s ease;
+}
+.tech-products:hover .tech-products-img-panel img {
+    transform: scale(1.03);
+}
+.tech-section-heading {
+    font-family: var(--font-heading);
+    font-size: clamp(30px, 5vw, 54px);
+    font-weight: 700;
+    color: var(--dark);
+    line-height: 1.0;
+    letter-spacing: -0.025em;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+}
+.tech-product-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 36px;
+}
+.tech-product-list li {
+    font-family: var(--font-body);
+    font-size: 16px;
+    color: var(--dark);
+    padding-left: 22px;
+    position: relative;
+    line-height: 1.4;
+}
+.tech-product-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 2px;
+    background: var(--dark);
+}
+.tech-outline-btn {
+    display: inline-block;
+    align-self: flex-start;
+    border: 2px solid var(--dark);
+    color: var(--dark);
+    padding: 13px 24px;
+    font-family: var(--font-heading);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    transition: background 0.25s ease, color 0.25s ease;
+}
+.tech-outline-btn:hover {
+    background: var(--dark);
+    color: #fff;
+}
+
+@media (min-width: 860px) {
+    .tech-products {
+        flex-direction: row;
+        min-height: 560px;
+    }
+    .tech-products-text {
+        width: 50%;
+        padding: 80px 80px;
+        order: 1;
+        justify-content: center;
+    }
+    .tech-products-img-panel {
+        width: 50%;
+        height: auto;
+        max-height: none;
+        order: 2;
+    }
+}
+
+/* Mining and drilling section */
+.tech-mining-band {
+    position: relative;
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: var(--dark);
+}
+.tech-mining-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+}
+.tech-mining-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        105deg,
+        rgba(29,14,3,0.93) 0%,
+        rgba(29,14,3,0.72) 55%,
+        rgba(29,14,3,0.30) 100%
+    );
+    z-index: 1;
+}
+.tech-mining-content {
+    position: relative;
+    z-index: 2;
+    padding: 64px 28px;
+    max-width: 680px;
+}
+.tech-mining-badge {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.42);
+    margin-bottom: 18px;
+}
+.tech-mining-heading {
+    font-family: var(--font-heading);
+    font-size: clamp(36px, 6vw, 68px);
+    font-weight: 700;
+    color: #fff;
+    line-height: 0.93;
+    letter-spacing: -0.025em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.tech-mining-body {
+    font-family: var(--font-body);
+    font-size: 15px;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.7;
+    max-width: 440px;
+}
+
+@media (min-width: 860px) {
+    .tech-mining-band {
+        min-height: 540px;
+    }
+    .tech-mining-content {
+        padding: 96px 80px;
+    }
+}
+
+/* Equipment cards */
+.tech-equipment {
+    background: #f5f3f0;
+    padding: 64px 28px 72px;
+}
+.tech-equipment-header {
+    max-width: 560px;
+    margin: 0 auto 48px;
+    text-align: center;
+}
+.tech-equipment-sub {
+    font-family: var(--font-body);
+    font-size: 15px;
+    color: rgba(29,14,3,0.5);
+    margin-top: 12px;
+    line-height: 1.6;
+}
+.tech-equipment-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.tech-equip-card {
+    background: #fff;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.tech-equip-img {
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+    background: var(--dark);
+    flex-shrink: 0;
+}
+.tech-equip-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 0.7s ease;
+}
+.tech-equip-card:hover .tech-equip-img img {
+    transform: scale(1.04);
+}
+.tech-equip-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.tech-equip-placeholder::before {
+    content: '';
+    width: 36px;
+    height: 36px;
+    border: 2px solid rgba(255,255,255,0.15);
+    border-radius: 50%;
+}
+.tech-equip-placeholder span {
+    font-family: var(--font-heading);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.25);
+}
+.tech-equip-info {
+    padding: 24px 26px 28px;
+    flex: 1;
+}
+.tech-equip-info h3 {
+    font-family: var(--font-heading);
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+}
+.tech-equip-info p {
+    font-family: var(--font-body);
+    font-size: 14px;
+    color: rgba(29,14,3,0.58);
+    line-height: 1.65;
+}
+
+@media (min-width: 600px) {
+    .tech-equipment-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (min-width: 860px) {
+    .tech-equipment {
+        padding: 88px 80px 96px;
+    }
+    .tech-equip-img {
+        height: 260px;
+    }
+}
+
+/* CTA band */
+.tech-cta-band {
+    background: var(--dark);
+    padding: 80px 28px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+}
+.tech-cta-heading {
+    font-family: var(--font-heading);
+    font-size: clamp(26px, 4.5vw, 48px);
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    line-height: 1.05;
+    max-width: 640px;
+}
+.tech-cta-sub {
+    font-family: var(--font-body);
+    font-size: 15px;
+    color: rgba(255,255,255,0.55);
+    margin-bottom: 8px;
+}
+.tech-cta-link {
+    display: inline-block;
+    background: #BF8C14;
+    color: #fff;
+    padding: 16px 38px;
+    font-family: var(--font-heading);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    transition: background 0.25s ease;
+    margin-top: 8px;
+}
+.tech-cta-link:hover {
+    background: #A97B0F;
+}
+@media (min-width: 860px) {
+    .tech-cta-band {
+        padding: 100px 80px;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+<!-- Mobile nav -->
+<div class="nav-overlay"></div>
+
+<!-- HEADER -->
+<header class="navbar">
+    <div class="navbar-container">
+        <a href="index.html" class="navbar-logo">
+            <img src="images/wix/nav-logo.webp" alt="Greg's Manufacturing" width="34" height="34">
+        </a>
+        <nav class="navbar-nav">
+            <a href="canadacorebox.html" class="nav-link">CanadaCoreBox</a>
+            <a href="corecutting.html" class="nav-link">Core Cutting</a>
+            <a href="shop.html" class="nav-link">Catalogue</a>
+            <a href="technology.html" class="nav-link nav-link--active">Technology</a>
+            <a href="about.html" class="nav-link">About Us</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+            <div class="nav-drawer-phone">
+                <a href="tel:+12044722217">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.11 12 19.79 19.79 0 0 1 1 4.18 2 2 0 0 1 3 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    204-472-2217
+                </a>
+            </div>
+        </nav>
+        <div class="navbar-phone">
+            <a href="tel:+12044722217"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-right:5px;vertical-align:middle;opacity:0.7"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.11 12 19.79 19.79 0 0 1 1 4.18 2 2 0 0 1 3 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>204-472-2217</a>
+        </div>
+        <div class="navbar-social-icons">
+            <a href="https://www.facebook.com/GregsManufacturing" target="_blank" rel="noopener" aria-label="Facebook">
+                <svg viewBox="0 0 24 24" width="18" height="18"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" fill="#1D0E03"/></svg>
+            </a>
+        </div>
+        <button class="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</header>
+
+<!-- Hero -->
+<section class="tech-hero">
+    <div class="tech-hero-img-panel">
+        <img src="images/catalog/cnc-machinery-press.jpg" alt="Weinig Unimat precision moulder — Greg's Manufacturing">
+    </div>
+    <div class="tech-hero-content-panel">
+        <a href="contact.html" class="tech-quote-pill">Get a Quote &rarr;</a>
+        <div class="tech-hero-text">
+            <span class="tech-eyebrow">Modern Precision Milling</span>
+            <h1 class="tech-hero-heading">Automation<br>That<br>Matters</h1>
+            <p class="tech-hero-body">We run modern moulders and CNC saws. High output, consistent cuts, fast turnaround.</p>
+            <a href="#products" class="tech-amber-btn">See How It Works &rarr;</a>
+        </div>
+    </div>
+</section>
+
+<!-- Custom wood products -->
+<section class="tech-products" id="products">
+    <div class="tech-products-text animate-on-scroll animate-left">
+        <h2 class="tech-section-heading">Custom<br>Wood<br>Products</h2>
+        <ul class="tech-product-list">
+            <li>Exploration Products</li>
+            <li>Manufactured Wood</li>
+            <li>Dimensional Lumber</li>
+            <li>Rough Cut Lumber</li>
+        </ul>
+        <a href="shop.html" class="tech-outline-btn">Explore Our Products &rarr;</a>
+    </div>
+    <div class="tech-products-img-panel animate-on-scroll animate-right">
+        <img src="images/catalog/dimensional-lumber-stack.jpg" alt="Dimensional lumber — Greg's Manufacturing">
+    </div>
+</section>
+
+<!-- Mining band -->
+<section class="tech-mining-band">
+    <img src="images/catalog/lumber-yard.jpg" alt="Greg's Manufacturing lumber yard" class="tech-mining-bg">
+    <div class="tech-mining-overlay"></div>
+    <div class="tech-mining-content animate-on-scroll">
+        <span class="tech-mining-badge">Manitoba &middot; EST. 1934</span>
+        <h2 class="tech-mining-heading">Woods to<br>Goods for<br>Mining</h2>
+        <p class="tech-mining-body">Custom cuts for mining and drilling crews in MB and SK. Fast turnaround, reliable delivery.</p>
+    </div>
+</section>
+
+<!-- Equipment grid -->
+<section class="tech-equipment" id="equipment">
+    <div class="tech-equipment-header animate-on-scroll">
+        <h2 class="tech-section-heading" style="text-align:center">Our Equipment</h2>
+        <p class="tech-equipment-sub">We've invested in solid equipment that handles high-volume orders with consistency and speed.</p>
+    </div>
+    <div class="tech-equipment-grid">
+
+        <div class="tech-equip-card animate-on-scroll" data-delay="0">
+            <div class="tech-equip-img">
+                <img src="images/catalog/cnc-machinery-press.jpg" alt="Weinig Unimat 3200 moulder">
+            </div>
+            <div class="tech-equip-info">
+                <h3>Weinig Unimat 3200</h3>
+                <p>High-speed moulder. Runs profiles fast and clean — dimensional lumber, core box stock, custom cuts.</p>
+            </div>
+        </div>
+
+        <div class="tech-equip-card animate-on-scroll" data-delay="100">
+            <div class="tech-equip-img">
+                <img src="images/catalog/cnc-machinery-cutting.jpg" alt="Precision cutting system">
+            </div>
+            <div class="tech-equip-info">
+                <h3>Precision Cutting System</h3>
+                <p>CNC cross-cut for tight dimensions every time. Consistent lengths on big runs.</p>
+            </div>
+        </div>
+
+        <div class="tech-equip-card animate-on-scroll" data-delay="200">
+            <div class="tech-equip-img tech-equip-placeholder">
+                <span>Photo Coming Soon</span>
+            </div>
+            <div class="tech-equip-info">
+                <h3>Automated Stacking &amp; Bundling</h3>
+                <p>Keeps material moving from the floor to the yard. No holdup between production and shipping.</p>
+            </div>
+        </div>
+
+        <div class="tech-equip-card animate-on-scroll" data-delay="300">
+            <div class="tech-equip-img tech-equip-placeholder">
+                <span>Photo Coming Soon</span>
+            </div>
+            <div class="tech-equip-info">
+                <h3>Quality Inspection Station</h3>
+                <p>Every piece checked for dimension, finish, and structural integrity before it leaves Cranberry Portage.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- CTA band -->
+<section class="tech-cta-band">
+    <h2 class="tech-cta-heading animate-on-scroll">Ready to Source<br>from the Source?</h2>
+    <p class="tech-cta-sub animate-on-scroll" data-delay="100">Get pricing on custom wood products for your next project.</p>
+    <a href="contact.html" class="tech-cta-link animate-on-scroll" data-delay="200">Get a Quote &rarr;</a>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="brush-divider"></div>
+    <div class="footer-content">
+        <div class="footer-logo">
+            <img src="images/wix/footer-logo.png" alt="GML Logo">
+            <p class="footer-tagline">Built in Cranberry Portage, MB.<br>Trusted across the north.</p>
+        </div>
+        <nav class="footer-nav">
+            <a href="canadacorebox.html">CanadaCoreBox</a>
+            <a href="corecutting.html">Core Cutting</a>
+            <a href="shop.html">Catalogue</a>
+            <a href="technology.html">Technology</a>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About Us</a>
+        </nav>
+        <div class="footer-social">
+            <a href="https://www.facebook.com/GregsManufacturing" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        &copy; 2026 Greg's Manufacturing Limited. All Rights Reserved.
+    </div>
+</footer>
+
+<script src="js/main.js?v=2"></script>
+<!-- STICKY MOBILE CALL BAR -->
+<a href="tel:+12044722217" class="mobile-call-bar" aria-label="Call Greg's Manufacturing">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.11 12 19.79 19.79 0 0 1 1 4.18 2 2 0 0 1 3 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    <span>Call Us &mdash; 204-472-2217</span>
+</a>
+</body>
+</html>

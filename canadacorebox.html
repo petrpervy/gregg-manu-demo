@@ -5,9 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CanadaCoreBox | Greg's Manufacturing</title>
     <meta name="description" content="CanadaCoreBox by Greg's Manufacturing — precision plywood and dimensional lumber core boxes for mineral exploration. AQ, BQ, NQ, HQ, and PQ sizes. Made in Manitoba.">
+    <meta property="og:title" content="CanadaCoreBox | Greg's Manufacturing">
+    <meta property="og:description" content="Precision plywood and dimensional lumber core boxes for mineral exploration — AQ, BQ, NQ, HQ, and PQ sizes. Made in Manitoba by Greg's Manufacturing.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.gregsmanufacturing.ca/canadacorebox.html">
+    <meta property="og:image" content="images/wix/corebox-photo.jpg">
+    <link rel="icon" href="images/wix/nav-logo.webp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Questrial&family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,400;1,700&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css?v=13">
+    <link rel="stylesheet" href="css/styles.css?v=19">
     <style>
 
 /* ══════════════════════════════════════════
@@ -316,7 +322,7 @@
     flex-direction: column;
 }
 .ccb-variant-img {
-    background: #f0ebe3;
+    background: #C8B898;
     padding: 36px 28px 28px;
     overflow: hidden;
 }
@@ -325,6 +331,7 @@
     aspect-ratio: 4/3;
     object-fit: contain;
     display: block;
+    mix-blend-mode: multiply;
     transition: transform 0.4s ease;
 }
 .ccb-variant-card:hover .ccb-variant-img img { transform: scale(1.05); }
@@ -393,7 +400,7 @@
     object-fit: cover;
     object-position: center 10%;
     display: block;
-    filter: brightness(1.18) contrast(1.05);
+    filter: brightness(0.72) contrast(1.08);
 }
 .ccb-photo-band-caption {
     position: absolute;
@@ -721,13 +728,21 @@
 <header class="navbar">
     <div class="navbar-container">
         <a href="index.html" class="navbar-logo">
-            <img src="https://static.wixstatic.com/media/cbf3d6_d84fb97ebce346318b91014af316a2ef~mv2.webp/v1/fill/w_68,h_68,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/cbf3d6_d84fb97ebce346318b91014af316a2ef~mv2.webp" alt="Greg's Manufacturing" width="34" height="34">
+            <img src="images/wix/nav-logo.webp" alt="Greg's Manufacturing" width="34" height="34">
         </a>
         <nav class="navbar-nav">
-            <a href="canadacorebox.html" class="nav-link" style="font-weight:600;">CanadaCoreBox</a>
+            <a href="canadacorebox.html" class="nav-link nav-link--active" style="font-weight:600;">CanadaCoreBox</a>
+            <a href="corecutting.html" class="nav-link">Core Cutting</a>
             <a href="shop.html" class="nav-link">Catalogue</a>
+            <a href="technology.html" class="nav-link">Technology</a>
             <a href="about.html" class="nav-link">About Us</a>
             <a href="contact.html" class="nav-link">Contact</a>
+            <div class="nav-drawer-phone">
+                <a href="tel:+12044722217">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.11 12 19.79 19.79 0 0 1 1 4.18 2 2 0 0 1 3 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    204-472-2217
+                </a>
+            </div>
         </nav>
         <div class="navbar-phone">
             <a href="tel:+12044722217"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-right:5px;vertical-align:middle;opacity:0.7"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.11 12 19.79 19.79 0 0 1 1 4.18 2 2 0 0 1 3 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>204-472-2217</a>
@@ -760,12 +775,7 @@
             <a href="#variants" class="ccb-cta-ghost">View Products ↓</a>
         </div>
     </div>
-    <a href="#stats" class="ccb-scroll-hint" aria-label="Scroll down">
-        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"/>
-            <path d="M8 11l4 4 4-4"/>
-        </svg>
-    </a>
+
 </section>
 
 <!-- ════════════════════════════════════
@@ -1054,12 +1064,14 @@
     <div class="brush-divider"></div>
     <div class="footer-content">
         <div class="footer-logo">
-            <img src="https://static.wixstatic.com/media/cbf3d6_6646ef0430bb4366b4a4011373a65ad4~mv2.png/v1/fill/w_466,h_166,al_c,q_85,usm_0.66_1.00_0.01/cbf3d6_6646ef0430bb4366b4a4011373a65ad4~mv2.png" alt="GML Logo">
+            <img src="images/wix/footer-logo.png" alt="GML Logo">
             <p class="footer-tagline">Built in Cranberry Portage, MB.<br>Trusted across the north.</p>
         </div>
         <nav class="footer-nav">
             <a href="canadacorebox.html">CanadaCoreBox</a>
+            <a href="corecutting.html">Core Cutting</a>
             <a href="shop.html">Catalogue</a>
+            <a href="technology.html">Technology</a>
             <a href="contact.html">Contact</a>
             <a href="about.html">About Us</a>
         </nav>
@@ -1075,5 +1087,10 @@
 </footer>
 
 <script src="js/main.js?v=3"></script>
+<!-- STICKY MOBILE CALL BAR -->
+<a href="tel:+12044722217" class="mobile-call-bar" aria-label="Call Greg's Manufacturing">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.11 12 19.79 19.79 0 0 1 1 4.18 2 2 0 0 1 3 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    <span>Call Us &mdash; 204-472-2217</span>
+</a>
 </body>
 </html>

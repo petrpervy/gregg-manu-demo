@@ -41,6 +41,9 @@
   var animElements = document.querySelectorAll('.animate-on-scroll');
   if (animElements.length === 0) return;
 
+  // Mark body so CSS knows JS is running (hides elements until animated)
+  document.documentElement.classList.add('js-ready');
+
   var observer = new IntersectionObserver(function(entries) {
     entries.forEach(function(entry) {
       if (entry.isIntersecting) {
@@ -56,13 +59,22 @@
       }
     });
   }, {
-    threshold: 0.1,
-    rootMargin: '0px 0px -40px 0px'
+    threshold: 0.08,
+    rootMargin: '0px 0px -20px 0px'
   });
 
   animElements.forEach(function(el) {
     observer.observe(el);
   });
+
+  // Safety net: if any element hasn't animated after 4s, force it visible
+  setTimeout(function() {
+    animElements.forEach(function(el) {
+      if (!el.classList.contains('animated')) {
+        el.classList.add('animated');
+      }
+    });
+  }, 4000);
 })();
 
 // === PARALLAX — Full-width photo strip ===

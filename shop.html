@@ -5,9 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catalogue | Greg's Manufacturing</title>
     <meta name="description" content="Browse Greg's Manufacturing catalogue — core boxes, manufactured wood, dimensional lumber, pallets, and custom wood products for mineral exploration and construction across Canada.">
+    <meta property="og:title" content="Catalogue | Greg's Manufacturing">
+    <meta property="og:description" content="Browse Greg's Manufacturing catalogue — core boxes, manufactured wood, dimensional lumber, pallets, and custom wood products for mineral exploration and construction across Canada.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.gregsmanufacturing.ca/shop.html">
+    <meta property="og:image" content="images/wix/manufactured-wood.png">
+    <link rel="icon" href="images/wix/nav-logo.webp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Questrial&family=Poppins:ital,wght@0,400;0,600;0,700;1,700&family=Caveat&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css?v=19">
 </head>
 <body>
 
@@ -18,13 +24,21 @@
 <header class="navbar">
     <div class="navbar-container">
         <a href="index.html" class="navbar-logo">
-            <img src="https://static.wixstatic.com/media/cbf3d6_d84fb97ebce346318b91014af316a2ef~mv2.webp/v1/fill/w_68,h_68,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/cbf3d6_d84fb97ebce346318b91014af316a2ef~mv2.webp" alt="Greg's Manufacturing" width="34" height="34">
+            <img src="images/wix/nav-logo.webp" alt="Greg's Manufacturing" width="34" height="34">
         </a>
         <nav class="navbar-nav">
             <a href="canadacorebox.html" class="nav-link">CanadaCoreBox</a>
-            <a href="shop.html" class="nav-link">Catalogue</a>
+            <a href="corecutting.html" class="nav-link">Core Cutting</a>
+            <a href="shop.html" class="nav-link nav-link--active">Catalogue</a>
+            <a href="technology.html" class="nav-link">Technology</a>
             <a href="about.html" class="nav-link">About Us</a>
             <a href="contact.html" class="nav-link">Contact</a>
+            <div class="nav-drawer-phone">
+                <a href="tel:+12044722217">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.11 12 19.79 19.79 0 0 1 1 4.18 2 2 0 0 1 3 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    204-472-2217
+                </a>
+            </div>
         </nav>
         <div class="navbar-phone">
             <a href="tel:+12044722217"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-right:5px;vertical-align:middle;opacity:0.7"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.11 12 19.79 19.79 0 0 1 1 4.18 2 2 0 0 1 3 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>204-472-2217</a>
@@ -44,8 +58,8 @@
 
 <!-- SHOP BANNER -->
 <section class="shop-banner">
-    <video class="shop-banner-video" autoplay muted loop playsinline poster="https://static.wixstatic.com/media/11062b_239a9db138c34cf99833210cd4f97926f000.jpg/v1/fill/w_1920,h_600,al_c,q_85,usm_0.33_1.00_0.20/11062b_239a9db138c34cf99833210cd4f97926f000.jpg">
-        <source src="https://video.wixstatic.com/video/11062b_239a9db138c34cf99833210cd4f97926/1080p/mp4/file.mp4" type="video/mp4">
+    <video class="shop-banner-video" autoplay muted loop playsinline poster="images/wix/shop-banner.jpg">
+        <source src="videos/shop-banner.mp4" type="video/mp4">
     </video>
     <div class="shop-banner-overlay"></div>
     <div class="shop-banner-inner">
@@ -56,6 +70,12 @@
 
 <!-- SHOP CONTENT -->
 <div class="shop-content">
+    <!-- FILTER TOGGLE (mobile) -->
+    <button class="shop-filter-toggle" id="filter-toggle" onclick="document.querySelector('.shop-sidebar').classList.toggle('sidebar-open'); this.querySelector('span').textContent = document.querySelector('.shop-sidebar').classList.contains('sidebar-open') ? 'Hide Filters' : 'Show Filters';">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="8" y1="12" x2="20" y2="12"/><line x1="12" y1="18" x2="20" y2="18"/></svg>
+        <span>Show Filters</span>
+    </button>
+
     <!-- SIDEBAR -->
     <aside class="shop-sidebar">
         <h3>Filter by</h3>
@@ -87,6 +107,13 @@
 
     <!-- MAIN -->
     <div>
+        <div class="shop-search-bar">
+            <svg class="shop-search-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            <input type="text" id="product-search" class="shop-search-input" placeholder="Search products... (e.g. core box, pallet, siding)" autocomplete="off">
+            <span id="search-clear" class="shop-search-clear" style="display:none;">&times;</span>
+        </div>
+        <div id="search-no-results" class="search-no-results" style="display:none;">No products match your search.</div>
+
         <div class="sort-bar">
             <select>
                 <option>Sort by</option>
@@ -391,12 +418,14 @@
     <div class="brush-divider"></div>
     <div class="footer-content">
         <div class="footer-logo">
-            <img src="https://static.wixstatic.com/media/cbf3d6_6646ef0430bb4366b4a4011373a65ad4~mv2.png/v1/fill/w_466,h_166,al_c,q_85,usm_0.66_1.00_0.01/cbf3d6_6646ef0430bb4366b4a4011373a65ad4~mv2.png" alt="GML Logo">
+            <img src="images/wix/footer-logo.png" alt="GML Logo">
             <p class="footer-tagline">Built in Cranberry Portage, MB.<br>Trusted across the north.</p>
         </div>
         <nav class="footer-nav">
             <a href="canadacorebox.html">CanadaCoreBox</a>
+            <a href="corecutting.html">Core Cutting</a>
             <a href="shop.html">Catalogue</a>
+            <a href="technology.html">Technology</a>
             <a href="contact.html">Contact</a>
             <a href="about.html">About Us</a>
         </nav>
@@ -410,5 +439,42 @@
 </footer>
 
 <script src="js/main.js?v=3"></script>
+<script>
+(function() {
+  const searchInput = document.getElementById('product-search');
+  const clearBtn = document.getElementById('search-clear');
+  const noResults = document.getElementById('search-no-results');
+  const cards = document.querySelectorAll('.product-grid-card');
+
+  if (!searchInput) return;
+
+  searchInput.addEventListener('input', function() {
+    const q = this.value.toLowerCase().trim();
+    clearBtn.style.display = q ? 'block' : 'none';
+    let visible = 0;
+
+    cards.forEach(function(card) {
+      const name = (card.querySelector('h3') || {}).textContent || '';
+      const cat = card.getAttribute('data-category') || '';
+      const match = !q || name.toLowerCase().includes(q) || cat.toLowerCase().includes(q);
+      card.style.display = match ? '' : 'none';
+      if (match) visible++;
+    });
+
+    noResults.style.display = (q && visible === 0) ? 'block' : 'none';
+  });
+
+  clearBtn.addEventListener('click', function() {
+    searchInput.value = '';
+    searchInput.dispatchEvent(new Event('input'));
+    searchInput.focus();
+  });
+})();
+</script>
+<!-- STICKY MOBILE CALL BAR -->
+<a href="tel:+12044722217" class="mobile-call-bar" aria-label="Call Greg's Manufacturing">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.11 12 19.79 19.79 0 0 1 1 4.18 2 2 0 0 1 3 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    <span>Call Us &mdash; 204-472-2217</span>
+</a>
 </body>
 </html>
